@@ -34,27 +34,31 @@ export default function HowItWorks() {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-8 relative z-10 max-w-6xl mx-auto mt-8">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col lg:flex-row items-center w-full lg:w-auto">
+            <div key={index} className="relative flex flex-col">
               {/* Card */}
-              <div className={`neo-box ${step.color} p-8 w-full max-w-sm relative`}>
-                <div className="absolute -top-5 -left-5 bg-white border-[3px] border-black w-12 h-12 flex items-center justify-center font-black text-xl rounded-full shadow-[2px_2px_0px_0px_#000]">
+              <div className={`neo-box ${step.color} p-8 w-full h-full relative flex flex-col`}>
+                <div className="absolute -top-5 -left-5 bg-white border-[3px] border-black w-12 h-12 flex items-center justify-center font-black text-xl text-black rounded-full shadow-[2px_2px_0px_0px_#000]">
                   {step.num}
                 </div>
-                {step.icon}
+                <div>{step.icon}</div>
                 <h3 className="text-2xl font-bold uppercase mb-2">{step.title}</h3>
-                <p className="font-medium text-lg border-t-2 border-current pt-4">
+                <p className="font-medium text-lg border-t-2 border-current pt-4 flex-grow">
                   {step.desc}
                 </p>
               </div>
 
               {/* Arrow */}
               {index < steps.length - 1 && (
-                <div className="py-6 lg:py-0 lg:px-6 text-black">
-                  <ArrowDown size={40} className="lg:hidden" strokeWidth={3} />
-                  <ArrowRight size={48} className="hidden lg:block" strokeWidth={3} />
-                </div>
+                <>
+                  <div className="lg:hidden text-black absolute -bottom-12 left-1/2 -translate-x-1/2 flex items-center justify-center h-12">
+                    <ArrowDown size={40} strokeWidth={3} />
+                  </div>
+                  <div className="hidden lg:flex text-black absolute -right-6 top-1/2 -translate-y-1/2 z-20 w-8 items-center justify-center translate-x-1/2">
+                    <ArrowRight size={48} strokeWidth={3} />
+                  </div>
+                </>
               )}
             </div>
           ))}
