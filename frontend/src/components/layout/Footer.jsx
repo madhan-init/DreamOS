@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           
           <div className="text-center md:text-left">
-            <h2 className="text-3xl font-black uppercase tracking-tighter mb-2">DreamVault</h2>
+            <h2 className="text-3xl font-black uppercase tracking-tighter mb-2">Dream OS</h2>
             <p className="text-gray-400 font-medium italic">Made for dreamers.</p>
           </div>
 
@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t-[2px] border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm font-medium">
-          &copy; {new Date().getFullYear()} DreamVault. All rights reserved.
+          &copy; {new Date().getFullYear()} Dream OS. All rights reserved.
         </div>
       </div>
     </footer>

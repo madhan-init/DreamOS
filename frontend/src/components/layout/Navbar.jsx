@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <span className="font-bold text-2xl tracking-tighter uppercase">DreamVault</span>
+            <span className="font-bold text-2xl tracking-tighter uppercase">Dream OS</span>
           </div>
           
           <div className="hidden md:flex space-x-8 items-center font-bold">

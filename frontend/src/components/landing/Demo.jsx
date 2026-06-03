@@ -11,7 +11,7 @@ export default function Demo() {
             See the Magic
           </h2>
           <p className="text-xl text-gray-300 font-medium max-w-2xl mx-auto">
-            Experience how DreamVault transforms your nightly adventures into actionable insights.
+            Experience how Dream OS transforms your nightly adventures into actionable insights.
           </p>
         </div>
 
